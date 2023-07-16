@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Ascending order</title>
+    
+
+</head>
+<body>
+    <script>
+        function numbersThenCharacters(arr)
+        {
+            const sortArr = [];
+            for (let i=0; i< arr.length; i++)
+            {
+                const subArr = arr[i];
+                const number = [];
+                const letter = [];
+                for (let j=0; j<subArr.length; j++)
+                {
+                    if (typeof item === 'numbers')
+                    {
+                        numbers.push(items);
+                    }
+                    else if (typeof item === 'string')
+                    {
+                        characters.push(item);
+                    }
+                }
+                number.sort((a, b) => a - b);
+                letter.sort();
+                sortArr.push([...number,...letter]);
+            }
+            return sortArr;
+        }
+        const arr = [
+            [11, 12, 23, 24, "a", "b"],
+            ["c", 56, 44],
+            [67, "d"],
+            ["f", "e", 78]
+        ];
+        const sortArr = numbersThenCharacters(arr);
+        console.log("Sorted array: ", sortArr); 
+    </script>
+</body>
